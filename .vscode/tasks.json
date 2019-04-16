@@ -11,7 +11,16 @@
                 "cwd": "/i3c/i3c.local"
             },
             "problemMatcher": []
-        },         
+        },         {
+            "label": "ansDup",
+            "type": "shell",
+            "command": "/i dup ansible",
+            "options": {
+                "cwd": "/i3c/i3c.local"
+            },
+            "problemMatcher": []
+        },
+
         {
             "label": "tfPlan",
             "type": "shell",
@@ -38,6 +47,15 @@
                 "cwd": "/i3c/i3c.local"
             },
             "problemMatcher": []
-        }                      
+        },  
+        {
+            "label": "ansPlaybook",
+            "type": "shell",
+            "command": "/i exec ansible /ans-play -v ec2_prov_playbook.yml",
+            "options": {
+                "cwd": "/i3c/i3c.local"
+            },
+            "problemMatcher": []
+        } 
     ]
 }

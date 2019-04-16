@@ -1,0 +1,10 @@
+FROM i3c/base/ubuntu18
+
+
+RUN apt-get -y install ansible
+
+COPY ans.sh /ans
+COPY ans-play.sh /ans-play
+RUN chmod a+x /ans && chmod a+x /ans-play
+
+WORKDIR /i3c/data
