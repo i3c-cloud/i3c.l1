@@ -24,7 +24,7 @@
         {
             "label": "tfPlan",
             "type": "shell",
-            "command": "/i exec terraform /tf plan",
+            "command": "/i execd terraform /tf plan -input=false",
             "options": {
                 "cwd": "/i3c/i3c.local"
             },
@@ -33,7 +33,7 @@
         {
             "label": "tfApply",
             "type": "shell",
-            "command": "/i exec terraform /tf apply",
+            "command": "/i execd terraform /tf apply -no-color -auto-approve",
             "options": {
                 "cwd": "/i3c/i3c.local"
             },
@@ -42,7 +42,7 @@
         {
             "label": "tfDestroy",
             "type": "shell",
-            "command": "/i exec terraform /tf destroy",
+            "command": "/i execd terraform /tf destroy -no-color -auto-approve",
             "options": {
                 "cwd": "/i3c/i3c.local"
             },

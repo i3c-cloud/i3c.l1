@@ -14,17 +14,18 @@ var student = HJSON.parse(rawdata.toString());
 student.tasks.forEach(function(task) {
   var taskLabel = task.label;
   var taskCommand = task.command;
-  console.log(taskLabel);
+  //console.log(taskLabel);
 
   gulp.task(taskLabel, function(cb) {
-    console.log("================================================================================================================================");
+    console.log(taskCommand);
+    console.log("=====|||=====");
     var iPs = exec(taskCommand);
     iPs.stdout.pipe(process.stdout);
     iPs.stderr.on('data', function(data) {
         console.log('error: ' + data);
     });
     iPs.on('close', function(code) {
-        console.log("================================================================================================================================");
+      console.log("=====|||=====");
         console.log('returnCode: ' + code);
         cb(code);
     });
