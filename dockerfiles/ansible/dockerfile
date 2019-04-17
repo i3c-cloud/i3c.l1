@@ -8,6 +8,7 @@ COPY ans-play.sh /ans-play
 COPY addHost.sh /addHost
 RUN chmod a+x /ans && chmod a+x /ans-play && chmod a+x /addHost
 RUN adduser ansible && adduser ansible sudo && cp -R /home /home.backup && echo "ansible  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/ansible && chmod 0440 /etc/sudoers.d/ansible
+RUN echo "\n[all_hosts]" >> /etc/ansible/hosts
 USER ansible
  
 WORKDIR /i3c/data
