@@ -1,7 +1,7 @@
 FROM i3c/base/ubuntu18
 
 
-RUN apt-get -y update && apt-get -y install ansible openssh-client sudo
+RUN apt-get -y update && apt-get -y install ansible openssh-client sudo vim
 
 COPY ans.sh /ans
 COPY ans-play.sh /ans-play
