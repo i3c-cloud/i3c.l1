@@ -1,10 +1,8 @@
 
 
 dParams="-d \
-    --secret awsAccessKey \
-    --secret awsSecretKey \
-    --secret awsRegion \
-    --secret sshKeys \
+    --secret aws \
+    --secret azure \
     "
 i3cAfter() {
     /i exshd terraform "/tf init"
