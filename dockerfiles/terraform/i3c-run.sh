@@ -1,9 +1,10 @@
 
 
 dParams="-d \
-    --secret aws \
-    --secret azure \
+    --isecret aws \
+    --isecret azure \
     "
 i3cAfter() {
-    /i exshd terraform "/tf init"
+    #/i exshd terraform "/tf init"
+    echo "";
 }    
